@@ -1,0 +1,19 @@
+for React
+
+ npm i save dev      @babel/preset-react
+                     @babel/runtime, for async away
+                     react
+                     react-dom
+                     npm install --save-dev babel-plugin-transform-class-properties
+
+.bablerc:
+{
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    ["@babel/transform-runtime"],
+    ["transform-class-properties"]
+  ]
+}
