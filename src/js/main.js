@@ -7,7 +7,9 @@ import get from "@babel/runtime/helpers/esm/get";
 
 //
 ReactDOM.render(
-    <App/>,
+    <App
+        text = "Yeeeeee"
+    />,
     document.getElementById('root')
 );
 

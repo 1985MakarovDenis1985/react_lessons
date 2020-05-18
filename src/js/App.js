@@ -6,28 +6,36 @@ import ReactDOM from 'react-dom';
 // import Body from "./Body"
 // import Nav from "./Nav";
 
+//// =========== live cycle ===================
+// class App extends React.Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = {
+//             text: "Hello",
+//         };
+//     }
 //
-class App extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            text: "",
-            text2: 7777,
-            first_name: "",
-            age: 0
-        };
-    }
-
-    render() {
-        return (
-            <div style={{"textAlign": "center"}}>
-
-            </div>
-        )
-    }
-}
-
-export default App
+//     // // => позволяет props присвоить в state
+//     // static getDerivedStateFromProps(props, state){ // только эта функция
+//     //     return {text: props.text} // передано из main.js ReactDome
+//     // }
+//     componentDidMount() {  // => изменяет стейт через 3000 до рендера
+//         setTimeout(()=>{
+//             this.setState({text: "component did mount"})
+//         }, 3000)
+//     }
+//
+//
+//     render() {
+//         return (
+//             <div style={{"textAlign": "center"}}>
+//                 <p>{this.state.text}</p>
+//             </div>
+//         )
+//     }
+// }
+//
+// export default App
 
 //// =============================== lesson 2
 // class App extends React.Component {
