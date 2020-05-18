@@ -1,11 +1,43 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import Nav from "./Nav";
-// import Header from "./Header";
-// import Footer from "./Footer";
-// import Body from "./Body"
-// import Nav from "./Nav";
+import Home from './Home'
+import Contacts from "./Contacts";
+import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 
+// import Router from "react-router/modules/Router";
+
+////// ================== routing ================
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            text: "React"
+        }
+    }
+
+    render() {
+
+        return (
+            <Router>
+                <div className="routers" style={{"textAlign": "center"}}>
+                    <ul>
+                        <li><a href="/">Main page</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contacts">Contacts</a></li>
+                    </ul>
+                    <Switch>
+                        <Route exact path='/' component={Home}/>
+                        <Route exact path='/contacts' component={Contacts}/>
+                    </Switch>
+                </div>
+            </Router>
+
+        )
+    }
+}
+
+
+export default App
 
 
 ////// ================== expression JSX ================

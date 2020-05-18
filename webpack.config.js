@@ -76,6 +76,7 @@ module.exports = {
         compress: true,
         host: '0.0.0.0',
         useLocalIp: true,
+        historyApiFallback: true, //// for routing save history (решил проблему с React)
         port: 3030 //// порт
     },
     plugins: [                      //// регестрируем плагины => смотр. на оф сфйтах
