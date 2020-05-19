@@ -1,18 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from "./App";
-import set from "@babel/runtime/helpers/esm/set";
-import get from "@babel/runtime/helpers/esm/get";
+// ----------------------------------
+import Header from "./Header/Header";
+import CalculateBoby from "./CalculateBody/CalculateBody";
+import Footer from "./Footer/Footer";
 
 
-//
-ReactDOM.render(
-    <App
-        text = "Yeeeeee"
-    />,
-    document.getElementById('root')
-);
+class Content extends React.Component {
+    constructor(props) {
+        super(props);
+    }
 
+    render() {
+        return (
+            <div className='main_container'>
+                <Header/>
+                <CalculateBoby/>
+                <Footer/>
+            </div>
+
+        )
+    }
+}
+
+export default Content
+
+
+//-----------------------------------------------------------------------------
 
 //// ==================  если App является классом
 

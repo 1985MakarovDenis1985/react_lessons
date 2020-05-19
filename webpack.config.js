@@ -6,7 +6,7 @@ const HtmlWebpackPlugine = require('html-webpack-plugin');
 module.exports = {
     entry: {                        //// вход
         app: "./src/index.js",
-        // app: "./src/main.js"
+        // app: "./src/Content.js"
     },
     output:{                        //// выход
         filename: 'app.js',

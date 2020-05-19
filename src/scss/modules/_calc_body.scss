@@ -1,0 +1,95 @@
+
+
+.content_body {
+  background: $second-color;
+  height: 650px;
+  width: 90%;
+  margin: auto;
+  padding-top: 10px;
+}
+
+.titleP {
+  color: $primary-color;
+  padding-left: 2.5%;
+  margin-bottom: 5px;
+}
+
+.container_of_blocksCurrency {
+  color: $primary-color;
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: space-evenly;
+
+
+  .block_currency {
+    width: 30%;
+    height: 100px;
+    background: #f0f0f0;
+    border: 1px solid #92978b;
+    box-sizing: border-box;
+    padding: 15px;
+    font-size: 15px;
+
+    .usd {
+      margin-bottom: 0;
+    }
+
+    .block_currency_p {
+      position: relative;
+      margin-left: 60%;
+      margin-bottom: 0;
+
+      @media screen and(max-width: 600px) {
+        margin-left: 50%;
+      }
+      @media screen and(max-width: 425px) {
+        font-size: 13px;
+        margin-left: 30%;
+      }
+    }
+  }
+}
+
+.culculate_of_currency {
+  width: 95%;
+  height: 400px;
+  background: #f0f0f0;
+  margin: auto;
+  border: 1px solid #92978b;
+  padding: 25px;
+  color: $primary-color;
+
+  .block_input {
+    .inputBuy, .inputSell {
+      float: left;
+      margin-top: 5px;
+    }
+
+    p {
+      margin-left: 20px;
+    }
+  }
+
+
+
+  .value_of_Currency {
+    color: $primary-color;
+    font-family: $font-stack;
+    float: none;
+
+  }
+
+  .options{
+    height: 30px;
+    margin-left: 5px;
+    margin-top: 5px;
+    color: $primary-color;
+    font-family: $font-stack;
+
+  }
+
+  .result_box{
+    margin-top: 20px;
+  }
+}

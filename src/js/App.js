@@ -1,43 +1,54 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Home from './Home'
-import Contacts from "./Contacts";
-import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+import Content from './Content'
+import set from "@babel/runtime/helpers/esm/set";
+import get from "@babel/runtime/helpers/esm/get";
+
+// import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 
 // import Router from "react-router/modules/Router";
 
-////// ================== routing ================
-class App extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            text: "React"
-        }
-    }
-
-    render() {
-
-        return (
-            <Router>
-                <div className="routers" style={{"textAlign": "center"}}>
-                    <ul>
-                        <li><a href="/">Main page</a></li>
-                        <li><a href="/about">About</a></li>
-                        <li><a href="/contacts">Contacts</a></li>
-                    </ul>
-                    <Switch>
-                        <Route exact path='/' component={Home}/>
-                        <Route exact path='/contacts' component={Contacts}/>
-                    </Switch>
-                </div>
-            </Router>
-
-        )
-    }
-}
 
 
-export default App
+
+ReactDOM.render(
+    <Content />,
+    document.getElementById('root')
+);
+
+
+
+
+// ////// ================== routing ================
+// class App extends React.Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = {
+//             text: "React"
+//         }
+//     }
+//
+//     render() {
+//
+//         return (
+//             <Router>
+//                 <div className="routers" style={{"textAlign": "center"}}>
+//                     <ul>
+//                         <li><a href="/">Main page</a></li>
+//                         <li><a href="/about">About</a></li>
+//                         <li><a href="/contacts">Contacts</a></li>
+//                     </ul>
+//                     <Switch>
+//                         <Route exact path='/' component={Home}/>
+//                         <Route exact path='/contacts' component={Contacts}/>
+//                     </Switch>
+//                 </div>
+//             </Router>
+//             // Exact указывает, что строка запроса должна в точности соответствовать шаблону маршрута
+//         )
+//     }
+// }
+// export default App
 
 
 ////// ================== expression JSX ================
@@ -92,7 +103,7 @@ export default App
 //
 //     // // => позволяет props присвоить в state
 //     // static getDerivedStateFromProps(props, state){ // только эта функция
-//     //     return {text: props.text} // передано из main.js ReactDome
+//     //     return {text: props.text} // передано из Content.js ReactDome
 //     // }
 //     componentDidMount() {  // => изменяет стейт через 3000 до рендера
 //         setTimeout(()=>{
