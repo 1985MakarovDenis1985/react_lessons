@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 // ----------------------------------
+
 import Header from "./Header/Header";
 import CalculateBoby from "./CalculateBody/CalculateBody";
 import Footer from "./Footer/Footer";
@@ -18,12 +20,12 @@ class Content extends React.Component {
                 <CalculateBoby/>
                 <Footer/>
             </div>
-
         )
     }
 }
 
 export default Content
+// https://api.exchangeratesapi.io/latest
 
 
 //-----------------------------------------------------------------------------

@@ -1,5 +1,4 @@
 
-
 .content_body {
   background: $second-color;
   height: 650px;
@@ -29,7 +28,7 @@
     border: 1px solid #92978b;
     box-sizing: border-box;
     padding: 15px;
-    font-size: 15px;
+    font-size: 14px;
 
     .usd {
       margin-bottom: 0;
@@ -40,6 +39,10 @@
       margin-left: 60%;
       margin-bottom: 0;
 
+      @media screen and (max-width: 768px) {
+        margin-left:40%;
+        font-size: 13px;
+      }
       @media screen and(max-width: 600px) {
         margin-left: 50%;
       }
@@ -71,8 +74,6 @@
     }
   }
 
-
-
   .value_of_Currency {
     color: $primary-color;
     font-family: $font-stack;
@@ -80,7 +81,7 @@
 
   }
 
-  .options{
+  .options {
     height: 30px;
     margin-left: 5px;
     margin-top: 5px;
@@ -89,7 +90,12 @@
 
   }
 
-  .result_box{
+  .result_box {
     margin-top: 20px;
   }
+}
+
+.submitBtn{
+  height: 30px;
+  margin-left: 5px;
 }
