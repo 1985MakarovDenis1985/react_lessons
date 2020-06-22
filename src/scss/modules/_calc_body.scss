@@ -1,7 +1,7 @@
 
 .content_body {
   background: $second-color;
-  height: 650px;
+  height: 400px;
   width: 90%;
   margin: auto;
   padding-top: 10px;
@@ -56,7 +56,7 @@
 
 .culculate_of_currency {
   width: 95%;
-  height: 400px;
+  height: 200px;
   background: #f0f0f0;
   margin: auto;
   border: 1px solid #92978b;
@@ -98,4 +98,9 @@
 .submitBtn{
   height: 30px;
   margin-left: 5px;
+}
+
+input{
+  border: 1px solid burlywood;
+  outline: burlywood;
 }

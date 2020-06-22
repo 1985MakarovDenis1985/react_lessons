@@ -8,6 +8,86 @@ $second-color: #ffffff;
 $footer-bg: #212121;
 
 
+.slide-enter {
+  //начальная анимация
+}
+.slide-enter .slide-enter-active {
+  //анимация после добавления в ДОМ
+  transition: .5s;
+}
+.slide-leave {
+  //начальная анимация
+}
+.slide-leave .slide-leave-active {
+  //анимация после удаления из ДОМ
+  transition: .5s;
+}
+.slide-appear{
+  //начальная анимация
+}
+.slide-appear .slide-appear-active{
+  //анимация после добавления в ДОМ
+}
+
+
+
+
+.main_block{
+  padding: 10px;
+  box-sizing: border-box;
+
+  .topBlock{
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    display: flex;
+  }
+
+  .bottomBlock{
+    margin-top: 10px;
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 10px;
+  }
+}
+
+.block_btn{
+  margin: 0;
+  padding: 0;
+}
+#btnChangeTheme, #addBtn, #removeBtn, #async{
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  height: 40px;
+  background: deepskyblue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+#addBtn, #removeBtn, #async{
+  position: relative;
+  top: 0;
+  margin-left: 15px;
+  background: #039be5;
+}
+
+#removeBtn{
+  background: red;
+}
+#async{
+  background: green;
+}
+
+body.dark {
+  background: #343a40;
+  color: #fff;
+}
+body.dark hr  {
+  background: #343a40;
+  color: #fff;
+}
+
 @import "../../node_modules/normalize.scss/normalize";
 @import "modules/header";
 @import "modules/calc_body";

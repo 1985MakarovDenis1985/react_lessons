@@ -1,22 +1,82 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import ReactDOM from 'react-dom';
-import Content from './Content'
 import set from "@babel/runtime/helpers/esm/set";
 import get from "@babel/runtime/helpers/esm/get";
+import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 
-// import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
-
-// import Router from "react-router/modules/Router";
-
-
-
-
-ReactDOM.render(
-    <Content />,
-    document.getElementById('root')
-);
+import Counter from "./Counter";
+// -------------------------------
+import PostForm from "./components/PostForm";
+import Posts from "./components/Posts";
+import FetchedPosts from "./components/FetchedPosts";
+import {connect} from "react-redux";
 
 
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            title: "Hello React"
+        }
+    }
+
+    render() {
+
+        return (
+            <div className="container pt-3">
+                <div className="row">
+                    <div className="col">
+                        <PostForm/>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col">
+                        <p>Синхронные посты</p>
+                        <Posts/>
+                    </div>
+                    <div className="col">
+                        <p>Асинхронные посты</p>
+                        <FetchedPosts />
+                    </div>
+                </div>
+
+                {/*<Counter/>*/}
+
+            </div>
+        )
+    }
+}
+
+
+export default App
+
+// export default App
+
+// ReactDOM.render(
+//     <Parent/>,
+//     document.getElementById('root')
+// );
+
+
+// -------------------------------------------------
+
+
+// /// ============ form from html
+// let form = document.getElementById("form")
+// let obj = {};
+
+// function getDataFromForm() {
+//     let formData = new FormData(form);
+//     formData.forEach((el,key)=>{
+//         obj[key] = el
+//     })
+//     console.log(obj)
+// }
+// form.addEventListener("submit", (e) => {
+//     e.preventDefault()
+//     getDataFromForm()
+// })
 
 
 // ////// ================== routing ================
@@ -103,7 +163,7 @@ ReactDOM.render(
 //
 //     // // => позволяет props присвоить в state
 //     // static getDerivedStateFromProps(props, state){ // только эта функция
-//     //     return {text: props.text} // передано из Content.js ReactDome
+//     //     return {text: props.text} // передано из Parent.js ReactDome
 //     // }
 //     componentDidMount() {  // => изменяет стейт через 3000 до рендера
 //         setTimeout(()=>{

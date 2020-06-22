@@ -2,10 +2,9 @@
 // require('bootstrap');
 
 import "./scss/main.scss"
-// import "./js/main"
-import "./js/App"
+import "./js/index"
 
-
+// import "./js/Js"
 
 
 

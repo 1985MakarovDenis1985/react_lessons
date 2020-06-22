@@ -6,7 +6,7 @@ const HtmlWebpackPlugine = require('html-webpack-plugin');
 module.exports = {
     entry: {                        //// вход
         app: "./src/index.js",
-        // app: "./src/Content.js"
+        // app: "./src/Parent.js"
     },
     output:{                        //// выход
         filename: 'app.js',
@@ -84,7 +84,8 @@ module.exports = {
             filename: "[name].css",
         }),
         new HtmlWebpackPlugine({
-            template: "./src/index.html"
+            // inject: false,
+            template: path.join(__dirname, "./src/index.html" )
         }),
     ],
 };
@@ -92,6 +93,10 @@ module.exports = {
 
 // //  npm i @babel/core @babel/preset-env autoprefixer babel-loader browser-sync-webpack-plugin css-loader css-mqpacker cssnano file-loader file-loader mini-css-extract-plugin node-sass path postcss-loader sass-loader style-loader webpack webpack-cli webpack-dev-server image-webpack-loader
 
+// в package.json после scripts прописать: для обхода безопасности cross - адрес разрешение запроса
+// пример:
+        // "proxy": "http://localhost5000",
+        // а в fetch изменить путь на 3000 вместо 5000
 
 // ==================== install for async || await
 
